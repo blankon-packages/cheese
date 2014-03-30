@@ -1,3 +1,10 @@
+cheese (3.12.0-0blankon1) tambora; urgency=low
+
+  * New upstream releease
+  * Bump Build-depends version GTK+3.0 glib20. gnome-desktop3 clutter-1.0
+
+ -- Mahyuddin Ramli <yudi.al@gmail.com>  Sun, 30 Mar 2014 15:37:01 +0700
+
 cheese (3.11.91-1blankon1) tambora; urgency=medium
 
   * New upstream release to tambora
