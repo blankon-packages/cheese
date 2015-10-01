@@ -1,9 +1,91 @@
-cheese (3.12.0-1blankon1) tambora; urgency=medium
+cheese (3.18.0-1blankon1) tambora; urgency=medium
 
-  * New Upstream Release
-  * Merge whit sid
+  * Merge with Debian Experimental
 
- -- Aan Yustian <aftian@localhost>  Sat, 05 Apr 2014 22:29:00 +0700
+ -- mhy <dotovr@mhy>  Thu, 01 Oct 2015 18:21:39 +0700
+
+cheese (3.18.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Update (build-)dependencies according to configure.ac changes:
+    - gstreamer-plugins-bad bumped to >= 1.4
+    - switch from clutter-gst-2.0 to clutter-gst-3.0
+  * Rename library packages for new bumped SONAMEs
+    - libcheese7 -> libcheese8
+    - libcheese-gtk23 -> libcheese-gtk25
+  * Update libcheese-gtk25.symbols and debian/libcheese8.symbols
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 22 Sep 2015 18:20:38 +0200
+
+cheese (3.16.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Drop debian/patches/substitute-bindir-and-libexecdir.patch, merged
+    upstream.
+  * Drop obsolete Breaks/Replaces from pre-wheezy.
+  * Install typelib files into multiarch paths.
+  * Mark gir and dev packages as Multi-Arch: same.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 27 May 2015 02:23:00 +0200
+
+cheese (3.14.1-2) unstable; urgency=medium
+
+  * debian/patches/substitute-bindir-and-libexecdir.patch:
+    + Substitute @bindir@ and @libexecdir@ in service files. Fixes
+      launching cheese from the shell. Closes: #765513.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Fri, 07 Nov 2014 12:37:43 +0100
+
+cheese (3.14.1-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Drop debian/patches/using-fmod-link-libm.patch: Applied upstream
+  * Drop debian/patches/revert-appstream-usage.patch and build-depend against
+    appstream-util
+  * debian/control.in: Bump Standards-Version to 3.9.6 (no further changes)
+
+ -- Laurent Bigonville <bigon@debian.org>  Sun, 19 Oct 2014 20:42:33 +0200
+
+cheese (3.14.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add debian/patches/revert-appstream-usage.patch
+    - we don't have appstream-glib in Debian yet...
+  * Add debian/patches/using-fmod-link-libm.patch
+    - libcheese-gtk now uses fmod and needs to link with libm
+  * debian/cheese.install: Ship gnome-camera-service and dbus services files
+  * Upload to unstable.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 24 Sep 2014 16:50:11 +0200
+
+cheese (3.13.90.1-1) experimental; urgency=medium
+
+  * New upstream release
+  * debian/control.in: b-d on vala (>= 0.25.4)
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Thu, 11 Sep 2014 21:45:32 +0200
+
+cheese (3.12.2-1) unstable; urgency=medium
+
+  [ Josselin Mouette ]
+  * Bump glib build-dependency to 2.39.90.
+
+  [ Andreas Henriksson ]
+  * libcheese-gtk23: depend on gstreamer1.0-clutter (Closes: #729253)
+    - uses cluttervideosink
+  * New upstream release.
+  * Bump valac build-dependency to >= 0.23.3
+  * Upload to unstable.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 15 Jul 2014 12:59:01 +0200
+
+cheese (3.12.1-1) experimental; urgency=medium
+
+  * New upstream translation release.
+  * Rebuild against new gnome-desktop.
+  * Bump gnome-desktop build-dependency accordingly.
+
+ -- Josselin Mouette <joss@debian.org>  Sat, 26 Apr 2014 10:29:08 +0200
 
 cheese (3.12.0-1) unstable; urgency=medium
 
@@ -12,19 +94,6 @@ cheese (3.12.0-1) unstable; urgency=medium
     - i.e. lower gnome-desktop build-dependency again.
 
  -- Andreas Henriksson <andreas@fatal.se>  Wed, 02 Apr 2014 21:39:33 +0200
-
-cheese (3.12.0-0blankon1) tambora; urgency=low
-
-  * New upstream releease
-  * Bump Build-depends version GTK+3.0 glib20. gnome-desktop3 clutter-1.0
-
- -- Mahyuddin Ramli <yudi.al@gmail.com>  Sun, 30 Mar 2014 15:37:01 +0700
-
-cheese (3.11.91-1blankon1) tambora; urgency=medium
-
-  * New upstream release to tambora
-
- -- Syai Mif <syai.unipdu@gmail.com>  Mon, 24 Mar 2014 11:23:17 +0700
 
 cheese (3.11.91-1) experimental; urgency=medium
 
